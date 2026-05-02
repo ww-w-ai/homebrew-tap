@@ -1,6 +1,6 @@
 cask "agentrunner" do
-  version "1.0.10"
-  sha256 "042b3ae2425e098f3fbceef5b56c124f4108df962ba69f2453ddc6e04ec4a8b4"
+  version "1.0.13"
+  sha256 "20add6f556a9faff5859c0c1b4618ca6302e3f695cc99e10112ca028cf41cd67"
 
   url "https://github.com/ww-w-ai/AgentRunner/releases/download/v#{version}/AgentRunner-#{version}.dmg"
   name "AgentRunner"
@@ -20,12 +20,10 @@ cask "agentrunner" do
     system "/usr/bin/open", "-a", "AgentRunner"
   end
 
-  uninstall quit:      "ai.ww-w.AgentRunner",
-            launchctl: "ai.ww-w.AgentRunner"
+  uninstall launchctl: "ai.ww-w.AgentRunner",
+            quit:      "ai.ww-w.AgentRunner"
 
-  zap trash: [
-    "~/Library/Application Support/AgentRunner",
-  ]
+  zap trash: "~/Library/Application Support/AgentRunner"
 
   caveats <<~EOS
     AgentRunner runs in your menu bar — look for the pixel character in the
