@@ -2,6 +2,10 @@
 
 Homebrew tap for [ww-w.ai](https://ww-w.ai) macOS apps and CLI tools.
 
+```bash
+brew tap ww-w-ai/tap
+```
+
 ## Available Casks
 
 ### AgentRunner
@@ -10,7 +14,6 @@ A tiny pixel hero who fights for you — your hard-working AI agent, live on you
 [Repo](https://github.com/ww-w-ai/AgentRunner) · [Latest release](https://github.com/ww-w-ai/AgentRunner/releases)
 
 ```bash
-brew tap ww-w-ai/tap
 brew install --cask agentrunner
 ```
 
@@ -24,26 +27,39 @@ Keep your Mac awake for exactly N hours, then auto-restore sleep. Lid-close safe
 [Repo](https://github.com/ww-w-ai/keeph)
 
 ```bash
-brew tap ww-w-ai/tap
 brew install keeph
 ```
 
-After install, follow the `caveats` instructions to source the function in your `~/.zshrc`, then run `keeph -h`.
+After install, source the function in your `~/.zshrc` (path is shown in `caveats`), then run `keeph -h`.
 
 ## Why Homebrew?
 
-The apps in this tap are ad-hoc signed (no Apple Developer ID) — so when you download a DMG directly, macOS Gatekeeper blocks the first launch. Homebrew handles the quarantine attribute automatically, so `brew install --cask` "just works" without the right-click → Open dance.
+**For Casks:** ww-w-ai apps are ad-hoc signed (no Apple Developer ID), so a direct DMG download triggers Gatekeeper on first launch. Homebrew handles the quarantine attribute automatically — `brew install --cask` "just works" without the right-click → Open dance.
+
+**For Formulae:** one-line install, automatic version management via `brew upgrade`, and clean uninstall. No manual `curl` + `~/.zshrc` editing.
 
 ## Updates
 
 ```bash
-brew update
+brew update            # refresh tap
+brew upgrade           # upgrade everything
+# or target a single package:
 brew upgrade --cask agentrunner
+brew upgrade keeph
 ```
 
 ## Uninstall
 
 ```bash
 brew uninstall --cask agentrunner
-brew untap ww-w-ai/tap   # optional
+brew uninstall keeph
+brew untap ww-w-ai/tap   # optional, removes the tap entirely
 ```
+
+## Contributing
+
+Issues and PRs welcome on the individual project repositories:
+- [AgentRunner](https://github.com/ww-w-ai/AgentRunner)
+- [keeph](https://github.com/ww-w-ai/keeph)
+
+For tap-specific issues (formula bugs, install errors), open an issue here.
