@@ -1,6 +1,6 @@
 # ww-w-ai Homebrew Tap
 
-Homebrew tap for [ww-w.ai](https://ww-w.ai) macOS apps.
+Homebrew tap for [ww-w.ai](https://ww-w.ai) macOS apps and CLI tools.
 
 ## Available Casks
 
@@ -15,6 +15,20 @@ brew install --cask agentrunner
 ```
 
 Then launch from Spotlight or `/Applications/AgentRunner.app`. Right-click the menu bar character to access settings.
+
+## Available Formulae
+
+### keeph
+
+Keep your Mac awake for exactly N hours, then auto-restore sleep. Lid-close safe.
+[Repo](https://github.com/ww-w-ai/keeph)
+
+```bash
+brew tap ww-w-ai/tap
+brew install keeph
+```
+
+After install, follow the `caveats` instructions to source the function in your `~/.zshrc`, then run `keeph -h`.
 
 ## Why Homebrew?
 
