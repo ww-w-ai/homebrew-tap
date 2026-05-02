@@ -34,9 +34,7 @@ After install, source the function in your `~/.zshrc` (path is shown in `caveats
 
 ## Why Homebrew?
 
-**For Casks:** ww-w-ai apps are ad-hoc signed (no Apple Developer ID), so a direct DMG download triggers Gatekeeper on first launch. Homebrew handles the quarantine attribute automatically — `brew install --cask` "just works" without the right-click → Open dance.
-
-**For Formulae:** one-line install, automatic version management via `brew upgrade`, and clean uninstall. No manual `curl` + `~/.zshrc` editing.
+One-line install, automatic version management via `brew upgrade`, and clean uninstall. No manual download, drag-to-Applications, or `~/.zshrc` editing.
 
 ## Updates
 
