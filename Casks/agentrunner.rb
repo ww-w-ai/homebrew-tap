@@ -1,6 +1,6 @@
 cask "agentrunner" do
-  version "1.1.1"
-  sha256 "d8d7e723ebb83bd86977aa7b478f781492f63889718ec39d00948da13f71892f"
+  version "1.2.0"
+  sha256 "30a2812049123d6d8b816971f7969346abc743242f804ccd4bfe24db25333f3d"
 
   url "https://github.com/ww-w-ai/AgentRunner/releases/download/v#{version}/AgentRunner-#{version}.dmg"
   name "AgentRunner"
